@@ -1,0 +1,73 @@
+/* mainapp/static/css/styles.css */
+
+/* Default light mode styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #1DB954; /* Spotify green */
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #181818;
+    color: #ffffff;
+}
+
+header.dark-mode {
+    background-color: #282828;
+}
+/* Add this to your styles.css for a better toggle appearance */
+label {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"] + span {
+    width: 40px;
+    height: 20px;
+    background: #ccc;
+    border-radius: 20px;
+    position: relative;
+    transition: background 0.3s;
+}
+
+input[type="checkbox"]:checked + span {
+    background: #1DB954;
+}
+
+input[type="checkbox"] + span:before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    transition: transform 0.3s;
+}
+
+input[type="checkbox"]:checked + span:before {
+    transform: translateX(20px);
+}

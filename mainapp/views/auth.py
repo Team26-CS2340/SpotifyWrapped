@@ -5,6 +5,12 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth import logout
 
+def home(request):
+    return render(request, 'mainapp/home.html')
+
+def top_tracks(request):
+    return render(request, 'mainapp/top_tracks.html')  # Create this template as well
+
 def register(request):
     if request.method == 'POST':
         username = request.POST['username']

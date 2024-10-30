@@ -29,6 +29,10 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    BASE_DIR / "static",  # Ensure this points to the correct directory
+]
 
 INSTALLED_APPS = [
     "django.contrib.admin",

@@ -1,6 +1,12 @@
 /* mainapp/static/css/styles.css */
 
 /* Base styles */
+main {
+    max-width: 800px; /* Optional: Limit the width of the main content */
+    margin: 0 auto;   /* Center the main content */
+    padding: 20px;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0; /* Light mode background */
@@ -84,3 +90,16 @@ input[type="checkbox"] + span:before {
 input[type="checkbox"]:checked + span:before {
     transform: translateX(20px);
 }
+#harrisonFordImage {
+    position: fixed; /* Use fixed positioning */
+    bottom: 20px;    /* Distance from the bottom */
+    left: 20px;      /* Distance from the left */
+    z-index: 1000;   /* Ensure it appears above other content */
+    text-align: left; /* Align text to the left */
+}
+
+#harrisonFordImage img {
+    max-width: 200px; /* Set a max width for the image */
+    height: auto;     /* Maintain aspect ratio */
+}
+

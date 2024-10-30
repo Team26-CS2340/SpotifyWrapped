@@ -1,8 +1,7 @@
-// mainapp/static/js/scripts.js
-
 document.addEventListener('DOMContentLoaded', function () {
     const darkModeToggle = document.getElementById('darkModeToggle');
     const harrisonFordToggle = document.getElementById('harrisonFordToggle');
+    const harrisonFordImage = document.getElementById('harrisonFordImage');
 
     // Check for saved user preferences
     if (localStorage.getItem('dark-mode') === 'enabled') {
@@ -13,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (localStorage.getItem('harrison-ford-theme') === 'enabled') {
         document.body.classList.add('harrison-ford-theme');
         harrisonFordToggle.checked = true;
+        harrisonFordImage.style.display = 'block'; // Show the image
     }
 
     darkModeToggle.addEventListener('change', function () {
@@ -29,10 +29,11 @@ document.addEventListener('DOMContentLoaded', function () {
         if (harrisonFordToggle.checked) {
             document.body.classList.add('harrison-ford-theme');
             localStorage.setItem('harrison-ford-theme', 'enabled');
+            harrisonFordImage.style.display = 'block'; // Show the image
         } else {
             document.body.classList.remove('harrison-ford-theme');
             localStorage.setItem('harrison-ford-theme', 'disabled');
+            harrisonFordImage.style.display = 'none'; // Hide the image
         }
     });
 });
-
